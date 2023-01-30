@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Gibdd_Parser.Controllers;
+namespace GibddParser.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-
+    
 }

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibdd-Parser", "Gibdd-Parser\Gibdd-Parser.csproj", "{7C878CF4-C2BC-4408-9E91-367C5EAD4B23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GibddParser", "GibddParser\GibddParser.csproj", "{7C878CF4-C2BC-4408-9E91-367C5EAD4B23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
