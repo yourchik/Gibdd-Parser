@@ -7,6 +7,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.Configure<IConfiguration>(builder.Configuration.GetSection("RuCaptchaApiKey"));
+    
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
