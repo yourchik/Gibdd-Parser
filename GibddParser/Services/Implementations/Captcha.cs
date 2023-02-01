@@ -39,7 +39,7 @@ public class Captcha : ICaptcha
     {
         try
         {
-            using (var request = new HttpRequestMessage(new HttpMethod("GET"), "https://chec9k.gibdd.ru/captcha"))
+            using (var request = new HttpRequestMessage(new HttpMethod("GET"), "https://check.gibdd.ru/captcha"))
             {
                 request.Headers.TryAddWithoutValidation("Accept", "*/*");
                 request.Headers.TryAddWithoutValidation("Accept-Language", "ru,en-US;q=0.9,en;q=0.8");
