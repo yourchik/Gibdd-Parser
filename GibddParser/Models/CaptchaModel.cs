@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace GibddParser.Models;
 
-public class Capcha
+public class CaptchaModel
 {
         [JsonProperty("token")]
         public string Token { get; set; }

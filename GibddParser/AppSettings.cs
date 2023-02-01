@@ -2,7 +2,7 @@ namespace Gibdd_Parser;
 
 public class AppSettings
 {
-    public static string RuCaptchaKey => Configuration.GetSection("RuCaptchaKey").Value;
+    public static string RuCaptchaKey => Configuration.GetSection("RuCaptchaApiKey").Value;
     public static string History => Configuration.GetSection("StateRoadSafetyInspectorateUrls").GetSection("History").Value;
     public static string TrafficAccident => Configuration.GetSection("StateRoadSafetyInspectorateUrls").GetSection("TrafficAccident").Value;
     public static string Restriction => Configuration.GetSection("StateRoadSafetyInspectorateUrls").GetSection("Restriction").Value;

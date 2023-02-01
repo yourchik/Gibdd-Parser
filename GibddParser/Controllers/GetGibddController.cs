@@ -1,8 +1,9 @@
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Unicode;
+using Gibdd_Parser;
 using GibddParser.Models;
-using GibddParser.Provider;
+using GibddParser.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GibddParser.Controllers;
@@ -23,30 +24,30 @@ public class GetGibddController : ControllerBase
     };
     
     [HttpGet("History")]
-    public async Task<string> Get(string number)
+    public async Task<string> GetHistory(string number)
     {
-        var result = await _gibddProvider.GetInfo<HistoryResponseModel>(number, "history", "https://xn--b1afk4ade.xn--90adear.xn--p1ai/proxy/check/auto/history");
+        var result = await _gibddProvider.GetResponse<HistoryResponse>(number, "history", AppSettings.History);
         return JsonSerializer.Serialize(result, _serializerOptions);
     }
     
     [HttpGet("TrafficAccident")]
     public async Task<string> GetDtp(string number)
     {
-        var result = await _gibddProvider.GetInfo<DtpResponseModel>(number, "dtp", "https://xn--b1afk4ade.xn--90adear.xn--p1ai/proxy/check/auto/dtp");
+        var result = await _gibddProvider.GetResponse<DtpResponse>(number, "dtp", AppSettings.TrafficAccident);
         return JsonSerializer.Serialize(result, _serializerOptions);
     }
 
     [HttpGet("Restriction")]
     public async Task<string> GetRestrictions(string number)
     {
-        var result = await _gibddProvider.GetInfo<RestrictResponseModel>(number, "restrictions", "https://xn--b1afk4ade.xn--90adear.xn--p1ai/proxy/check/auto/restriction");
+        var result = await _gibddProvider.GetResponse<RestrictResponse>(number, "restrictions", AppSettings.Restriction);
         return JsonSerializer.Serialize(result, _serializerOptions);
     }
     
     [HttpGet("Wanted")]
     public async Task<string> GetWanted(string number)
     {
-        var result = await _gibddProvider.GetInfo<WantedResponseModel>(number, "wanted", "https://xn--b1afk4ade.xn--90adear.xn--p1ai/proxy/check/auto/wanted");
+        var result = await _gibddProvider.GetResponse<WantedResponse>(number, "wanted", AppSettings.Wanted);
         return JsonSerializer.Serialize(result, _serializerOptions);
     }
 }

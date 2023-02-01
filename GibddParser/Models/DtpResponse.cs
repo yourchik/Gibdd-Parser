@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace GibddParser.Models;
 
-public class DtpResponseModel
+public class DtpResponse
 {
     [JsonProperty("requestTime")]
     public string RequestTime { get; set; }
