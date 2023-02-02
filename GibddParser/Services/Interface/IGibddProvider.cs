@@ -1,7 +1,7 @@
 
 namespace GibddParser.Services.Interface;
 
-public interface IGibddProvider : IMain
+public interface IGibddProvider : IGet
 {
     
 }

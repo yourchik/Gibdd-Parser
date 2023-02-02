@@ -17,7 +17,7 @@ public class GibddProvider : IGibddProvider
     {
         try
         {
-            return new Response<T>(true, "Данные успешно полученны", await GetInfo<T>(number, checkType, url));
+            return new Response<T>(true, "Данные успешно получены", await GetInfo<T>(number, checkType, url));
         }
         catch (Exception e)
         {
